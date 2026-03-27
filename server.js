@@ -108,11 +108,3 @@ app.listen(PORT, () => {
 ```
 
 ---
-
-### File 3 — `.env`
-```
-DB_HOST=<kubernetes-ec2-public-ip>
-DB_USER=hoteluser
-DB_PASSWORD=Hotel@123
-DB_NAME=hoteldb
-PORT=5000
