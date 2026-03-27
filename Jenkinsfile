@@ -64,39 +64,3 @@ pipeline {
         }
     }
 }
-```
-
----
-
-## Your Repo Structure:
-```
-hotel-backend/
-├── server.js        ✅
-├── package.json     ✅
-├── .env             ✅
-├── Dockerfile       ✅
-└── Jenkinsfile      ✅
-```
-
----
-
-## Step 3 — Open Port 5000 in AWS Security Group
-
-1. Go to **AWS Console → EC2 → Security Groups**
-2. Select **Jenkins EC2** security group
-3. Add inbound rule:
-   - **Port:** `5000`
-   - **Source:** `0.0.0.0/0`
-4. Click **Save rules**
-
----
-
-## Step 4 — Create Jenkins Pipeline
-
-1. Go to **Jenkins → New Item**
-2. Name: `hotel-backend`
-3. Select **Pipeline** → Click **OK**
-4. Set **SCM** to `Git`
-5. Enter repo URL:
-```
-https://github.com/Yash2471999/hotel-backend.git
