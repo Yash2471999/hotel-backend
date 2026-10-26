@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -26,7 +26,10 @@ jobs:
           java-version: 21
 
       - name: Install Salesforce CLI
-        run: npm install --global @salesforce/cli
+        run: npm install --global @salesforce/cli@latest
+
+      - name: Install Code Analyzer plugin
+        run: sf plugins install code-analyzer@latest
 
       - name: Run Salesforce Code Analyzer
         id: run-code-analyzer
